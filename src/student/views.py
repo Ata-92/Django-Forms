@@ -10,15 +10,17 @@ def student_page(request):
     if request.method == "POST":
         form = StudentForm(request.POST)
         if form.is_valid():
-            student_name = form.cleaned_data.get("first_name")
-            student_surname = form.cleaned_data.get("last_name")
-            student_number = form.cleaned_data.get("number")
+            # student_name = form.cleaned_data.get("first_name")
+            # student_surname = form.cleaned_data.get("last_name")
+            # student_number = form.cleaned_data.get("number")
 
-            print(student_name, student_surname, student_number)
-            print(form)
+            # print(student_name, student_surname, student_number)
+            # print(form)
 
-            student = Student(first_name = student_name, last_name = student_surname, number = student_number)
-            student.save()
+            # student = Student(first_name = student_name, last_name = student_surname, number = student_number)
+            # student.save()
+
+            form.save()
 
             return redirect("index")
 
