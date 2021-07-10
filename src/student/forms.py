@@ -7,7 +7,7 @@ from .models import Student
 #     last_name = forms.CharField(max_length=100, label='Last Name')
 #     number = forms.IntegerField(required = False)
 
-class Student(forms.ModelForm):
+class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ["first_name", "last_name", "number"]
